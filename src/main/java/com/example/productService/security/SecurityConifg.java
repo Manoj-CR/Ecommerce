@@ -28,6 +28,7 @@ public class SecurityConifg{
                         .authorizeHttpRequests((authorize) -> authorize
                             .requestMatchers("/products/**").permitAll()
                                 .requestMatchers("/search").permitAll()
+                                ///v2/api-docs
                             .anyRequest().authenticated()
                     )
                         .oauth2ResourceServer((oauth2) -> oauth2
